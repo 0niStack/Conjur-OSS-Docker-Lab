@@ -1,0 +1,16 @@
+# Loaded at the root branch
+- !host myapp
+
+- !variable db-username
+- !variable db-password
+
+# myapp can read (fetch) and execute (retrieve value) both secrets
+- !permit
+  role: !host myapp
+  privileges: [read, execute]
+  resource: !variable db-username
+
+- !permit
+  role: !host myapp
+  privileges: [read, execute]
+  resource: !variable db-password

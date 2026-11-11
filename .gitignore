@@ -1,0 +1,4 @@
+.env
+certs/
+.admin_api_key
+.host_api_key
